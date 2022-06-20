@@ -6,6 +6,6 @@ Possibility to add and delete a member, to add and delete a meeting place and to
 Uses Flask and Bootstrap.
 
 Run the code:
-```
+``
 python app.py
 ``
