@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <title>All Adherent</title>
+  </head>
+  <body>
+    <!-- ========== Bande Title ========== -->
+    <div class="bande_horizontale">
+      <div class="bande_horizontale_2">
+        <h3 class="lead font-monospace title-head-bar">DataBase Formulaire - All Participant <i class="bi bi-person-plus-fill"></i></h3>
+      </div>
+    </div>
+
+    <br />
+
+    <form method="POST" class="d-flex justify-content-center font-monospace">
+      <!-- ========== Formulaire ========== -->
+      <div class="row g-3 container align-center">
+        <!-- ===== UserName ===== -->
+        <div class="input-group">
+          <div class="input-group-text"><i class="bi bi-geo-alt"></i></div>
+          <input type="text" name="rencontre_lieu" class="form-control" id="autoSizingInputGroup" placeholder="Silicon Valley" />
+        </div>
+        <div class="input-group">
+          <div class="input-group-text"><i class="bi bi-calendar-date"></i></div>
+          <input type="text" name="rencontre_date" class="form-control" id="autoSizingInputGroup" placeholder="25/12/2021" />
+        </div>
+      </div>
+      <!-- ===== Button ===== -->
+      <div class="d-flex justify-content-center">
+        <button type="submit" name="submit" class="btn btn-light font-monospace"><i class="bi bi-person-plus-fill"></i> Submit</button>
+      </div>
+    </form>
+
+    <br />
+
+    <p class="container font-monospace btn-light">Lieu de la rencontre: {{lieu_renc}}, Date: {{date_renc}}</p>
+
+    <div class="row bg_all font-monospace">
+      <table>
+        <tr>
+          <th>ID Participant:</th>
+          <th>Lieu:</th>
+          <th>Date:</th>
+          <th>Nom:</th>
+          <th>Prenom:</th>
+          <th>Age:</th>
+          <th>Username:</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+          <td>{{item[0]}}</td>
+          <td>{{item[3]}}</td>
+          <td>{{item[4]}}</td>
+          <td>{{item[7]}}</td>
+          <td>{{item[8]}}</td>
+          <td>{{item[9]}}</td>
+          <td>{{item[10]}}</td>
+          <td>{{item[11]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <a href="index.html" class="row g-2 btn btn-light return-button" role="button"><i class="bi bi-arrow-left-circle-fill"></i></a>
+  </body>
+</html>

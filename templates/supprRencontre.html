@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ========== HEAD ========== -->
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <title>New Participation</title>
+  </head>
+  <body>
+    <!-- ========== Body ========== -->
+
+    <!-- ========== Bande Title ========== -->
+    <div class="bande_horizontale">
+      <div class="bande_horizontale_2">
+        <h3 class="lead font-monospace title-head-bar">DataBase Formulaire - Supprimer Rencontre <i class="bi bi-person-dash-fill"></i></h3>
+      </div>
+    </div>
+
+    <br />
+    <br /> 
+    
+    <!-- ========== Formulaire Center ========== -->
+    <form method="POST" class="d-flex justify-content-center font-monospace">
+      <!-- ========== Formulaire ========== -->
+      <div class="row g-3 container align-center">
+        <!-- ===== Id Rencontre ===== -->
+        <div class="input-group">
+          <div class="input-group-text"><i class="bi bi-geo-alt"></i> Lieu Rencontre</i></div>
+          <input type="number" name="lieu_rencontre" class="form-control" id="autoSizingInputGroup" placeholder="Silicon Valley" />
+        </div>
+        <!-- ===== Button ===== -->
+        <div class="d-flex justify-content-center">
+            <button type="submit" name="submit" class="btn btn-light font-monospace"><i class="bi bi-person-dash-fill"></i> Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <br />
+    <br />
+
+    <a href="index.html" class="row g-2 btn btn-light return-button" role="button"><i class="bi bi-arrow-left-circle-fill"></i></a>
+  </body>
+</html>
